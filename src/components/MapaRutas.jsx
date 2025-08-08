@@ -225,23 +225,7 @@ export function MapaRutas() {
           </small>
         </div>
 
-        <button
-          onClick={() => {
-            if (confirm('¿Seguro que querés reiniciar la ruta?')) {
-              setPuntos([]);
-              setEntregados([]);
-              localStorage.removeItem('rutas_puntos');
-              localStorage.removeItem('rutas_entregados');
-              setDirections(null);
-              setOrdenOptimizado([]);
-              setResumenRuta({ distancia: '', duracion: '' });
-              setUbicaciones([]);
-            }
-          }}
-          style={{ marginTop: 10, background: '#f55', color: '#fff', padding: '6px 12px', border: 'none' }}
-        >
-          🧹 Limpiar Ruta
-        </button>
+        
       </div>
 
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
